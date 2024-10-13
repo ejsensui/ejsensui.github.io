@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6d94bb0979.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <!-- ================================================================= HEADER/NAVBAR =======================================================================-->
+        <header>
+            <!-- Logo for branding -->
+            <a href="#" class="logo">EJ</a>
+            <!-- Hamburger menu icon for mobile view -->
+            <div class="menu-icon" id="mobile-menu">
+                <i class="fa fa-bars" id="hamburger"></i> <!-- Hamburger Icon -->
+                <i class="fa fa-times" id="close" style="display:none;"></i> <!-- Close Icon -->
+            </div>
+            <!-- Navigation links -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </header>
+
+        <!-- ================================================================= HOME SECTION =========================================================================-->
+        <section id="home">
+            <div class="home-img">
+                <img src="./homepic/profilehome.jpg" alt="profile">
+            </div>
+            <!-- Introduction text -->
+            <div class="homecontent">
+                <h3>Hi, I'm Eliott Chavez Jaojao</h3>
+                <h3>I'm an <span>Aspiring Web Developer</span></h3>
+                <p>I love building websites that are creative, as I continue to learn and grow in web development</p>
+            </div>
+        </section>
+
+        <!-- ================================================================= ABOUT SECTION =========================================================================-->
+        <section id="about">
+            <div class="about-container">
+                <!-- Description on the left side -->
+                <div class="left-content">
+                    <h1 class="heading">ABOUT ME</h1>
+                    <p class="sub-heading">I’m an aspiring web developer with a passion for building clean and functional websites...</p>
+                </div>
+                <!-- Profile card on the right side -->
+                <div class="card">
+                    <img src="./aboutpic/profilecard.jpg" alt="profile picture" width="200" height="150">
+                    <div class="profiletitle">
+                        <h1>ELIOTT JAOJAO</h1>
+                        <h2>Web Developer</h2>
+                        <h3>All my ideas are made by accident</h3>
+                    </div>
+                    <div class="cardbody">
+                        <!-- Skills section -->
+                        <div class="skills">
+                            <h2>Skills</h2>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JAVASCRIPT</li>
+                            </ul>
+                        </div>
+                        <div class="line"></div>
+                        <!-- Hobbies section -->
+                        <div class="hobbies">
+                            <h2>Hobbies</h2>
+                            <ul>
+                                <li>Coding</li>
+                                <li>Staying at home</li>
+                                <li>Watching Movies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= SERVICES SECTION =========================================================================-->
+        <section id="services">
+            <div class="service-container">
+                <div class="sub-title">My Services</div>
+                <div class="services-list">
+                    <!-- Service item -->
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Design</h2>
+                        <p>I create responsive and visually appealing websites...</p>
+                    </div>
+                    <!-- Service item -->
+                    <div>
+                        <i class="fa-solid fa-crop"></i>
+                        <h2>Graphic Design</h2>
+                        <p>I design graphics that reflect your brand's identity...</p>
+                    </div>
+                    <!-- Service item -->
+                    <div>
+                        <i class="fa-brands fa-app-store"></i>
+                        <h2>App Design</h2>
+                        <p>I design intuitive and user-friendly mobile apps...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= PORTFOLIO SECTION =========================================================================-->
+        <section id="portfolio">
+            <div class="portfolio-container">
+                <!-- Portfolio introduction text -->
+                <div class="left-text">
+                    <div class="portfolio-heading">PORTFOLIO</div>
+                    <p class="subheading">A collection of my achievements and recent projects...</p>
+                    <button id="myWorkBtn" class="my-work-button">My Work</button>
+                </div>
+                <!-- Portfolio items -->
+                <div class="work-list">
+                    <div class="box col-2 row-2" style="background-image:url(./img/portfolio/html.jpg);"></div>
+                    <div class="box col-2" style="background-image: url(./img/portfolio/portfolio.jpg);"></div>
+                    <div class="box col-2 row-2" style="background-image: url(./img/portfolio/css.jpg);"></div>
+                    <div class="box" style="background-image: url(./img/portfolio/sk3.jpg);"></div>
+                    <div class="box" style="background-image: url(./img/portfolio/php.jpg);"></div>
+                    <div class="box col-2" style="background-image: url(./img/portfolio/sk2.jpg);"></div>
+                    <div class="box col-2" style="background-image: url(./img/portfolio/landingpage.jpg);"></div>
+                </div>
+            </div>
+
+            <!-- ================================================================= MODAL SECTION =========================================================================-->
+            <!-- Modal for portfolio items -->
+            <div id="myWorkModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" id="closeBtn">&times;</span>
+                    <div class="modal-layout">
+                        <!-- Category navigation in modal -->
+                        <div class="category-nav">
+                            <button class="category-btn active" data-category="all">All</button>
+                            <button class="category-btn" data-category="webdesign">Web Design</button>
+                            <button class="category-btn" data-category="appdesign">App Design</button>
+                            <button class="category-btn" data-category="webdevelopment">Web Development</button>
+                            <button class="category-btn" data-category="graphicdesign">Graphic Design</button>
+                            <button class="category-btn" data-category="others">Others</button>
+                        </div>
+                        <!-- Category content in modal -->
+                        <div class="category-content">
+                            <div class="modal-box graphicdesign" style="display: none;">
+                                <img src="./image/works/graphicdesign/mlschedule.jpg" alt="ML Schedule">
+                            </div>
+
+                            <div class="modal-box webdesign" style="display: none;">
+                                <img src="./image/works/webdesign/dishes.jpg" alt="dishes">
+                            </div>
+
+                            <div class="modal-box webdevelopment" style="display: none;">
+                                <img src="./image/works/webdevelopment/crud.png" alt="Crud">
+                            </div>
+
+                            <div class="modal-box webdevelopment" style="display: none;">
+                                <img src="./image/works/webdevelopment/django.png" alt="django">
+                            </div>
+
+                            <div class="modal-box others" style="display: none;">
+                                <img src="./image/works/others/facebook.jpg" alt="facebook">
+                            </div>
+
+                            <div class="modal-box webdesign" style="display: none;">
+                                <img src="./image/works/webdesign/onepiece.jpg" alt="Onepiece">
+                            </div>
+                            
+                            <div class="modal-box webdesign" style="display: none;">
+                                <img src="./image/works/webdesign/landingpage.jpg" alt="Landing Page">
+                            </div>
+
+                            <div class="modal-box graphicdesign" style="display: none;">
+                                <img src="./image/works/graphicdesign/eventfatherdays.jpg" alt="Father's Day Event">
+                            </div>
+                            
+                            <div class="modal-box graphicdesign" style="display: none;">
+                                <img src="./image/works/graphicdesign/mutya.jpg" alt="Mutya">
+                            </div>
+                            
+                            <div class="modal-box graphicdesign" style="display: none;">
+                                <img src="./image/works/graphicdesign/bkbsports.jpg" alt="BKB Sports">
+                            </div>
+
+                            <div class="modal-box graphicdesign" style="display: none;">
+                                <img src="./image/works/graphicdesign/basketball.jpg" alt="Basketball">
+                            </div>
+                            
+                            <div class="modal-box others" style="display: none;">
+                                <img src="./image/works/others/sk.jpg" alt="facebook">
+                            </div>
+
+                            <div class="modal-box graphicdesign" style="display: none;">
+                                <img src="./image/works/graphicdesign/disco.jpg" alt="ML Schedule">
+                            </div>
+
+                            <div class="modal-box graphicdesign" style="display: none;">
+                                <img src="./image/works/graphicdesign/kkasembly.jpg" alt="KKA Assembly">
+                            </div>
+
+                            <div class="modal-box graphicdesign" style="display: none;">
+                                <img src="./image/works/graphicdesign/mlothers2.jpg" alt="ml result">
+                            </div>
+
+                            <div class="modal-box graphicdesign" style="display: none;">
+                                <img src="./image/works/graphicdesign/eventsml.jpg" alt="ml result">
+                            </div>
+
+                            <div class="modal-box appdesign" style="display: none;">
+                                <img src="./image/works/appdesign/mobileni.jpg" alt="Mobile NI">
+                            </div>
+
+                            <div class="modal-box graphicdesign" style="display: none;">
+                                <img src="./image/works/graphicdesign/pridemonth.jpg" alt="ml result">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+            <!-- ================================================================= FULL IMAGE =========================================================================-->
+            <!-- Full Image Viewer (hidden by default) -->
+            <div id="imageViewer" class="image-viewer">
+                <img id="largeImage" src="" alt="Large View">
+            </div>
+        </section>
+       <!-- ================================================================= CONTACT SECTION =========================================================================-->
+       <section id="contact">
+        <div class="contact-container">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="row">
+                <!-- Contact details -->
+                <div class="contact-left">
+                    <p><i class="fa-solid fa-paper-plane"></i>jaojaoeliott6@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>09995848010</p>
+                    <!-- Social media icons -->
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100084950445575"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- Contact form -->
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required />
+                        <input type="email" name="email" placeholder="Your Email" required />
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- External JavaScript file -->
+    <script src="script.js"></script>
+</main>
+</body>
+</html>
+
